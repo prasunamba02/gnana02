@@ -1,0 +1,178 @@
+# =================Inheritance=================#
+
+#***************Single Inheritance*****************#
+class father: #parent class
+    def father_method():
+        return "This is father method"
+#Inheriting father class
+class child(father):
+    def child_method():
+        return "This is child method"
+parent_object=father#the parent object only holds the methods of the father
+child_object=child#the child object holds the methods of the father as well as child methods
+print(parent_object.father_method())
+print(child_object.father_method())
+print(child_object.child_method())
+
+
+o/p:
+This is father method
+This is father method
+This is child method
+
+
+
+
+
+
+# =================Inheritance=================#
+
+#***************Single Inheritance*****************#
+class father: #parent class
+    def father_method():
+        return "This is father method"
+#Inheriting father class
+class child(father):
+    def child_method():
+        return "This is child method"
+parent_object=father#the parent object only holds the methods of the father
+child_object=child#the child object holds the methods of the father as well as child methods
+print(parent_object.father_method())
+print(child_object.father_method())
+print(child_object.child_method())
+
+#if we try like this
+print(parent_object.child_method())
+
+o/p:
+This is father method
+This is father method
+This is child method
+ERROR!
+Traceback (most recent call last):
+  File "<main.py>", line 18, in <module>
+AttributeError: type object 'father' has no attribute 'child_method'
+
+=== Code Exited With Errors ===
+
+
+
+
+
+#^^^^^^^^^^^^^^^^^^^Multiple Inheritance^^^^^^^^^^^^^^^^^^^^^^^^#
+class father:
+    def father_method():
+        return "This is father method"
+class mother:
+    def mother_method():
+        return "This is mother class"
+class child(father,mother):
+    def child_method():
+        return "I have properties of father and mother"
+father_object=father
+mother_object=mother
+child_object=child
+#The father is holding one method and that is father_method
+print(father_object.father_method())
+#The mother is holding one method and that is mother_method
+print(mother_object.mother_method())
+#The  child is holding two objects one is father_method and the other is mother_method
+print(child_object.father_method())
+print(child_object.mother_method())
+print(child_object.child_method())
+
+o/p:
+This is father method
+This is mother class
+This is father method
+This is mother class
+I have properties of father and mother
+
+
+
+
+
+
+
+#&&&&&&&&&&&&&&&& Multilevel Inheritance &&&&&&&&&&&&&&&&&&&&#
+class grandfather:
+    def grandfather_method():
+        return "This is grandfather method"
+class father(grandfather):
+    def father_method():
+        return "This is having the properties of grand father and this is a father method"
+class child(father,grandfather):
+    def child_method():
+        return "This having the properties of grandfather and father and this is a child method"
+grandfather_object=grandfather
+father_object=father
+child_object=child
+print(grandfather_object.grandfather_method())
+print(father_object.father_method())
+print(father_object.grandfather_method())
+print(child_object.child_method())
+print(child_object.father_method())
+print(child_object.grandfather_method())
+print("\n")
+
+
+o/p:
+This is grandfather method
+This is having the properties of grand father and this is a father method
+This is grandfather method
+This having the properties of grandfather and father and this is a child method
+This is having the properties of grand father and this is a father method
+This is grandfather method
+
+
+
+
+
+#you can write like this also
+#&&&&&&&&&&&&&&&& Multilevel Inheritance &&&&&&&&&&&&&&&&&&&&#
+class grandfather:
+    def grandfather_method():
+        return "This is grandfather method"
+class father(grandfather):
+    def father_method():
+        return "This is having the properties of grand father and this is a father method"
+class child(father):
+    def child_method():
+        return "This having the properties of grandfather and father and this is a child method"
+grandfather_object=grandfather
+father_object=father
+child_object=child
+print(grandfather_object.grandfather_method())
+print(father_object.father_method())
+print(father_object.grandfather_method())
+print(child_object.child_method())
+print(child_object.father_method())
+print(child_object.grandfather_method())
+print("\n")
+
+
+
+o/p:
+This is grandfather method
+This is having the properties of grand father and this is a father method
+This is grandfather method
+This having the properties of grandfather and father and this is a child method
+This is having the properties of grand father and this is a father method
+This is grandfather method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

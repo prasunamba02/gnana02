@@ -1,0 +1,37 @@
+Hybrid Inheritance:
+
+###################### Hybrid Inheritance  #####################
+class grandfather:
+    def grandfather_method():
+        return "This is grandfather method"
+class father(grandfather):
+    def father_method():
+        return "This is father method"
+class mother:
+    def mother_method():
+        return "This is mother method"
+class child(mother,father):
+    def child_method():
+        return "This is child method"
+grandfather_object=grandfather
+father_object=father
+mother_object=mother
+child_object=child
+print(grandfather_object.grandfather_method())
+print(father_object.father_method())
+print(father_object.grandfather_method())
+print(child_object.child_method())
+print(child_object.father_method())
+print(child_object.mother_method())
+        
+
+
+
+o/p:
+This is grandfather method
+This is father method
+This is grandfather method
+This is child method
+This is father method
+This is mother method
+

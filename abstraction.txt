@@ -1,0 +1,50 @@
+#-------------Abstraction---------------:
+# hiding unneccessary information and 
+#provides only useful information
+#abc module,abstract method means decoraters
+#@abstract method
+from abc import ABC,abstractmethod #abc is module #ABC is default class
+class four_wheeler(ABC):#inheriting ABC
+    @abstractmethod
+    def engine():
+        pass #if you dont want to know how the engine works just pass
+    #in this cases we use pass
+class swift(four_wheeler):#in swift we want ro use all the features that we use above no need to do again just inherit the four_wheeler class
+    def car_start():
+        return "Car is moving"
+car_1=swift
+ans=car_1.car_start()
+print(ans)
+    
+
+o/p:
+Car is moving
+
+
+
+
+
+
+
+#-------------Abstraction---------------:
+# hiding unneccessary information and 
+#provides only useful information
+#abc module,abstract method means decoraters
+#@abstract method
+from abc import ABC,abstractmethod #abc is module #ABC is default class
+class four_wheeler(ABC):#inheriting ABC
+    @abstractmethod
+    def engine():
+        return "hello this is the process of making engine"
+class swift(four_wheeler):#in swift we want ro use all the features that we use above no need to do again just inherit the four_wheeler class
+    def car_start():
+        return "Car is moving"
+car_1=swift
+ans=car_1.car_start()
+print(ans)
+
+
+o/p:
+Car is moving
+   #the same o/p is coming as the before one so what ewe understtoood from this is the abstraction shows only the important information
+

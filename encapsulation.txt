@@ -1,0 +1,54 @@
+#Encapsulation
+#1 . Binding of data
+#2. make the data private
+#3.INCS security
+#IMP: getter &setter
+class Student:
+    def __init__(self,marks):
+        self.marks=marks
+        self.__marks=marks #private means making the data private
+    def getter(self):
+        return self.__marks
+    def setter(self,marks):
+        self.__marks=marks
+#creating the object
+obj=Student(79)
+#set the data:
+obj.setter(79)
+#get the data:
+ans=obj.getter()
+print(ans)
+
+
+o/p:
+79
+
+
+
+
+
+
+#Encapsulation
+#1 . Binding of data
+#2. make the data private
+#3.INCS security
+#IMP: getter &setter
+class Student:
+    def __init__(self,marks):
+        self.marks=marks
+        self.__marks=marks #private means making the data private
+    def getter(self):
+        return self.__marks
+    def setter(self,marks):
+        self.__marks=marks
+#creating the object
+obj=Student(0)
+#set the data:
+obj.setter(81)
+#get the data:
+ans=obj.getter()
+print(ans)
+
+
+o/p:
+81

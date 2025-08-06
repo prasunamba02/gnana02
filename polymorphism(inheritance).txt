@@ -1,0 +1,23 @@
+#lets try without inheritance polymorphism
+class Animal:
+    def speak():
+        return "Animal is speaking"
+class bird():
+    def speak():
+        return "Bird is speaking"
+animal_object=Animal
+bird_object=bird
+print(animal_object.speak())
+print(bird_object.speak())
+
+#here the one method is doing different tasks means we use speak()method in both so in polymorphism one method perform different tasks
+
+o/p:
+Animal is speaking
+Bird is speaking
+
+
+
+
+
+

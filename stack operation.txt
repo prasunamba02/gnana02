@@ -1,0 +1,181 @@
+#STACK
+top=-1#it is not working here if we did not put this in the program then also the same output will come
+stack=[]
+def push():
+    if(top==len(stack)-1):
+        return "Stack is full"
+    else:
+        return "stack is not full"
+        top=top+1
+
+stack.append(10)
+stack.append(20)
+stack.append(11)
+print(stack)
+print("\n")
+
+
+o/p:
+[10, 20, 11]
+
+
+
+
+#PUSH OPERATION USING STACK
+def push(value):
+    top=-1
+    if(top==4):
+        return "stack is full"
+    else:
+        top=top+1
+        return stack.append(value)
+stack=[10]  #means initially the stack containg the element 10
+push(20)
+push(30)
+push(40)
+push(50)
+print(stack)
+print("\n")
+
+o/p:
+[10, 20, 30, 40, 50]
+
+
+
+
+#POP OPERATION USING STACK
+stack=[10,20,30,40,50]
+top!=1
+def pop():
+    if(top!=-1):
+        return "The stack is full"
+    else:
+        return "The stack is empty"
+stack.pop()
+print(stack)
+print("\n")
+
+o/p:
+[10, 20, 30, 40]
+
+
+
+#pop using stack
+stack=[10,20,30,40,50]
+top!=1
+def pop():
+    if(top!=-1):
+        return "The stack is full"
+    else:
+        return "The stack is empty"
+stack.pop()
+stack.pop()
+stack.pop()
+print(stack)
+
+
+o/p:
+[10, 20]
+
+
+
+#push and pop operation
+def push(value):
+    top=-1
+    if(top==4):
+        return "stack is full"
+    else:
+        top=top+1
+        return stack.append(value)
+def pop():
+    top=5
+    if(top!=-1):
+        return stack.pop()
+    else:
+        top=top-1
+        return "The stack is empty"
+stack=[]
+push(60)
+push(70)
+print(stack)
+pop()
+print(stack)
+
+
+
+o/p:
+[60, 70]
+[60]
+
+
+
+
+
+
+
+
+#   push and pop #  correct his code it is not correct litttle bit dout
+def push(value):
+    top=-1
+    if(top==4):
+        return "stack is full"
+    else:
+        top=top+1
+        return stack.append(value)
+def pop():
+    top=5
+    if(top!=-1):
+        return stack.pop()
+    else:
+        top=top-1
+        return "The stack is empty"
+stack=[]
+push(60)
+push(70)
+push(80)
+push(90)
+pop()
+print(stack)
+
+
+
+o/p:
+[60, 70, 80]
+
+--------------------------------------------------
+
+
+
+#   push and pop #
+def push(value):
+    top=-1
+    if(top==4):
+        return "stack is full"
+    else:
+        top=top+1
+        return stack.append(value)
+def pop():
+    top=5
+    if(top!=-1):
+        return stack.pop()
+    else:
+        top=top-1
+        return "The stack is empty"
+stack=[]
+top=-1 #####
+size=5
+stack=[None]*size
+push(60)
+push(70)
+push(80)
+push(90)
+pop()
+print(stack)
+
+o/p:
+[None, None, None, None, None, 60, 70, 80]
+
+
+
+
+
